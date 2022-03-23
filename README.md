@@ -39,8 +39,8 @@ You can download a copy of all the files in this repository by cloning the
     git clone https://github.com/DTUComputeTONIA/SDRLS.git
 
 
-The code of each experiment is placed in a different folder.
-You'll need a working Julia environment to run the code of Estimation and Experiment 2. The code of Experiment 1 is written in C.
+The code of each experiment can be found in a separate folder.
+You'll need a working Julia environment to run the code of numerical estimation and the second experiment (i.e., performance of the algorithms on MST problems). The code of the first experiment is written in C.
 
 
 ## License
