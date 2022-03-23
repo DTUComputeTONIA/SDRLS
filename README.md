@@ -30,12 +30,6 @@ optimization times even if the algorithm misses a working choice of k due
 to unlucky events. Finally, we present an example where standard bit mutation 
 still outperforms the k-bit flip operator with stagnation detection.
 
-## Software implementation
-
-> Briefly describe the software that was written to produce the results of this
-> paper.
-The code of each experiment is placed in a different folder.
-
 
 ## Getting the code
 
@@ -45,9 +39,7 @@ You can download a copy of all the files in this repository by cloning the
     git clone https://github.com/DTUComputeTONIA/SDRLS.git
 
 
-
-## Dependencies and Reproducing the results
-
+The code of each experiment is placed in a different folder.
 You'll need a working Julia environment to run the code of Estimation and Experiment 2. The code of Experiment 1 is written in C.
 
 
