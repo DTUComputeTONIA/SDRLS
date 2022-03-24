@@ -1,5 +1,4 @@
 using Pidoh
-# using Random
 using Graphs, SimpleWeightedGraphs
 using Plots, DataFrames, PlotThemes, Statistics, DataFrames, LaTeXStrings
 using StatsPlots
@@ -48,20 +47,12 @@ function create_experiment_ER(workspace, rep)
 end
 
 
-hpc = HPC("login2.hpc.dtu.dk", "amraj", 4,150)
-
 exp_er = create_experiment_ER("ecj/er_ecj", 400)
 exp_tg = create_experiment_TG("ecj/tg_ecj", 400)
 
-run(exp_er, hpc)
+run(exp_er)
 
-run(exp_tg, hpc)
-
-Pidoh.fetch(exp_er, hpc)
-Pidoh.fetch(exp_tg, hpc)
-
-exp_er = loadexperiment("_workspace/ecj/er_ecj/hpc-login2.hpc.dtu.dk_0309073628/merged_data-0309073735615.jld2")
-exp_tg = loadexperiment("_workspace/ecj/tg_ecj_04/hpc-login2.hpc.dtu.dk_0309092913/merged_data-0309093029579.jld2")
+run(exp_tg)
 
 data_er = runtimes(exp_er)
 data_tg = runtimes(exp_tg)
@@ -76,8 +67,6 @@ data = data_tg
 
 Plots.PyPlotBackend()
 
-# unique(data.algorithm)
-# leftjoin!(data, DataFrame(algorithm = unique(data.algorithm), order = [3, 0, 2, 1]), on="algorithm")
 
 Plots.font("DejaVu")
 
