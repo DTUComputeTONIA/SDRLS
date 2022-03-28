@@ -16,7 +16,7 @@ end
 function sd1(n, m, R)
     est = zero(BigInt)
     for r in 1:m-1
-        est += (e*n/r)^r*log(R)
+        est += 2*(e*n/r)^r*log(R)
     end
     est += (e*n/m)^m
     return est
